@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #6366f1;
+    /* Indigo 500 */
+    --secondary: #ec4899;
+    /* Pink 500 */
+    --dark-bg: #0f172a;
+    /* Slate 900 */
+    --card-bg: #1e293b;
+    /* Slate 800 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-indigo-500/30 flex items-center justify-center gap-2;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full hover:bg-slate-400 dark:hover:bg-slate-600;
+}
+
+/* Star Animation */
+/* Small, Medium, Large stars using box-shadow */
+@layer utilities {
+
+  .stars-small,
+  .stars-medium,
+  .stars-large {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    animation: animStar 50s linear infinite;
+  }
+
+  .stars-small {
+    box-shadow: 10vw 10vh #FFF, 20vw 20vh #FFF, 30vw 5vh #FFF, 45vw 25vh #FFF, 80vw 10vh #FFF, 90vw 50vh #FFF, 10vw 80vh #FFF, 50vw 90vh #FFF;
+    animation-duration: 50s;
+  }
+
+  .stars-medium {
+    width: 2px;
+    height: 2px;
+    box-shadow: 15vw 15vh #e0e7ff, 25vw 35vh #e0e7ff, 60vw 60vh #e0e7ff, 85vw 20vh #e0e7ff;
+    animation-duration: 100s;
+  }
+
+  .stars-large {
+    width: 3px;
+    height: 3px;
+    box-shadow: 50vw 50vh #c7d2fe, 70vw 70vh #c7d2fe;
+    animation-duration: 150s;
+  }
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-2000px);
+  }
+}
