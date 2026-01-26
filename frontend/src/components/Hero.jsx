@@ -38,9 +38,9 @@ const Hero = () => {
                             <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mb-2 pb-2">
                                 Dax Patel
                             </h1>
-                            <div className="text-xl md:text-3xl font-medium text-slate-600 dark:text-slate-300 flex items-center gap-2">
+                            <div className="text-xl md:text-3xl font-medium text-slate-600 dark:text-white flex items-center gap-2">
                                 I am a
-                                <FlipWords words={["Web Developer", "AI/ML Enthusiast", "Engineer", "Problem Solver"]} className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500 font-bold" />
+                                <FlipWords words={["Web Developer", "AI/ML Enthusiast", "Engineer", "Problem Solver"]} className="font-bold text-indigo-600 dark:text-white" />
                             </div>
                         </motion.div>
 
